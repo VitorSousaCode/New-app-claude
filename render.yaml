@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: controle-financeiro
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: BRAPI_TOKEN
+        sync: false
+      - key: APP_PASSWORD
+        sync: false
